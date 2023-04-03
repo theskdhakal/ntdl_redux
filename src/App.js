@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Form } from "./component/Form";
+import { Table } from "./component/Table";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper ">
+      <div className="container">
+        {/* <title>   */}
+
+        <div className="row ">
+          <div className="col text-center mt-5">
+            <h1>NOT TO DO LIST</h1>
+          </div>
+        </div>
+
+        {/* form area  */}
+        <Form />
+
+        {/* table area  */}
+        <Table />
+
+        {/* total hrs area  */}
+        <div className="row fw-bold">
+          <div className="col">
+            <p>The total hrs allocated for this week is 0</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
